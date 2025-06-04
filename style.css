@@ -1,0 +1,59 @@
+:root {
+    /* --margin-slider: 5.75em;
+    --image-border: 0.5em;
+    --opacity-image: 0.15; */
+
+    --footer-height: 3em;
+
+    --color-main: rgb(233, 233, 233);
+    --color-background: rgb(136, 136, 136);
+    /* --color-selected:  rgb(27, 67, 17); */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.landing-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('/ISP_BERGAMO_470.jpg');
+    background-repeat: no-repeat;
+
+    object-fit: contain;
+
+}
+
+.contact {
+    height: calc(100vh - var(--footer-height));
+
+    color: rgb(233, 233, 233);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+
+    height: var(--footer-height);
+
+    color: rgb(233, 233, 233);
+    background-color: rgb(136, 136, 136);
+}
+
+.social {
+    display: flex;
+    gap: 2em;
+
+    padding-left: 33vw;
+}
