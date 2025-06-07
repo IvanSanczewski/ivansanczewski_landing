@@ -3,7 +3,8 @@
     --image-border: 0.85em;
 
     --color-main: rgb(239, 239, 239);
-    --color-background: rgb(136, 136, 136);
+    --color-background: rgb(27, 27, 27);
+    --color-error: rgb(243, 188, 188);
 }
 
 * {
@@ -17,21 +18,38 @@
 }
 
 h1 {
-    font-weight: 500;
+    font-size: 2.45em;
+    font-weight: 700;
+    letter-spacing: 0.38em;
+
+    line-height: normal;
+
 }
 
+h3, h4 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 200;
+}
+
+
+
+/* P A G E  L A Y - O U T */
 .landing-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    box-sizing: border-box;
+
     width: 100vw;
     height: 100vh;
 
-    background-color: rgb(27, 27, 27);
-
-    box-sizing: border-box;
+    color: var(--color-main);
+    background-color: var(--color-background);
 
     position: relative;
 
@@ -90,4 +108,35 @@ img {
     left: 65vw;
     
     color: var(--color-main);
+}
+
+
+
+
+
+
+.left {
+    left: -1.085em;
+}
+
+.right {
+    right: -1.085em;
+}
+
+/* V I S I B I L I T Y */
+.dimmed {
+    transition-duration: 1s;
+    opacity: var(--opacity-image);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease, visibility 0s linear 1.2s; /* Retrasa la visibilidad */
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
 }

@@ -1,10 +1,15 @@
 const image = document.querySelector('.slides-container');
 const title = document.querySelector('.title');
 
+const street = document.querySelector('.street');
+const visions = document.querySelector('.visions');
+const portrait = document.querySelector('.portrait');
+const wedding = document.querySelector('.wedding');
+const event = document.querySelector('.event');
+const product = document.querySelector('.product');
 const contact = document.querySelector('.contact');
 const about = document.querySelector('.about');
 const form = document.querySelector('.form')
-const workshops = document.querySelector('.workshops')
 
 const menuItemList = document.querySelectorAll('.menu-item');
 
@@ -225,11 +230,18 @@ function toggleWorkshops (){
 // S L I D E R S
 
 const slides = [
-    '/assets/ISP_KOKEDAMA_3.png',
-    '/assets/ISP_KOKEDAMA_test.jpg',
-    '/assets/ISP_KOKEDAMA_WSP_389.jpg',
-    '/assets/ISP_KOKEDAMA_WSP_394.jpg',
-    '/assets/ISP_KOKEDAMA_WSP_405.jpg'
+    '/assets/ISP_BERLIN_290.jpg',
+    '/assets/ISP_BERLIN_331.jpg',
+    '/assets/ISP_BERLIN_414.jpg',
+    '/assets/ISP_BERLIN_487.jpg',
+    '/assets/ISP_BERLIN_602.jpg',
+    '/assets/ISP_BERGAMO_470.jpg',
+    '/assets/ISP_BERLIN_749.jpg',
+    '/assets/ISP_BERLIN_929.jpg',
+    '/assets/ISP_BERLIN_1188.jpg',
+    '/assets/ISP_BERLIN_1405.jpg',
+    '/assets/ISP_BERLIN_1577.jpg',
+    '/assets/ISP_BERLIN_1712.jpg',
 ];
 
 let currentSlide = 0;
