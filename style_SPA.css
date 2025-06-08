@@ -1,0 +1,208 @@
+:root {
+    --menu-space: 4.5em;
+    --image-border: 0.85em;
+
+    --color-main: rgb(239, 239, 239);
+    --color-background: rgb(27, 27, 27);
+    --color-error: rgb(243, 188, 188);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+/* E L E M E N T S */
+h1 {
+    display: inline-block;
+
+    width: 90VW;
+    text-align: center;
+
+    font-size: 1.85em;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+
+    line-height: normal;
+
+    opacity: 0.69;
+}
+
+h3, h4 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 200;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    border-radius: var(--image-border);
+
+    object-position: center;
+}
+
+
+
+/* P A G E  L A Y - O U T */
+.display-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 100vh;
+
+    color: var(--color-main);
+    background-color: var(--color-background);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* M E N U */
+.menu-item {
+    cursor: pointer;
+}
+
+.menu-top {
+    display: flex;
+    justify-content: space-around;
+    
+    margin-top: .35em;
+    position: relative;
+    
+    width: 100%;
+
+    background-color: green;
+}
+
+.menu-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 100%;
+    margin-bottom: .35em;
+    
+    position: relative;
+    background-color: green;
+}
+
+
+
+.image-slider {
+    position: relative;
+
+    width: calc(100% - var(--menu-space));
+    height: calc(100% - var(--menu-space));
+}
+
+
+/***** C O N T E N T *****/
+.content {
+    width: calc(100% - var(--menu-space));
+    height: calc(100% - var(--menu-space));
+    
+    position: relative;
+
+    background-color: rgb(173, 59, 59);
+}
+
+
+/***** I M A G E S *****/
+.slides-container {
+    width: 100%;
+    height: 100%;
+
+    background-color: violet;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+}
+
+.content-item {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
+
+
+
+.contact {
+    color: var(--color-main);
+}
+
+
+.social {
+    display: flex;
+    gap: 2em;
+    
+    position: absolute;
+    top: 70vh;
+    left: 65vw;
+    
+    color: var(--color-main);
+}
+
+
+
+
+
+/* A R R O W S */
+
+.arrow-btn {
+    cursor:  pointer;
+}
+
+.left {
+    left: -1.085em;
+}
+
+.right {
+    right: -1.085em;
+}
+
+
+/* V I S I B I L I T Y */
+.dimmed {
+    transition-duration: 1s;
+    opacity: var(--opacity-image);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease, visibility 0s linear 1.2s; /* Retrasa la visibilidad */
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
