@@ -93,6 +93,28 @@ img {
     object-position: center;
 }
 
+
+/* S I D E S */
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width:  100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+
+
 .contact {
     color: var(--color-main);
     
@@ -150,13 +172,16 @@ a:hover, .visions-toggler:hover {
 
 /* V I S I B I L I T Y */
 .hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1.2s ease, visibility 0s linear 1.2s; /* Retrasa la visibilidad */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease, visibility 0s linear 1.2s; /* Retrasa la visibilidad */
 }
 
 .visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 2s ease;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease;
 }
+
+
+
