@@ -170,12 +170,11 @@ h4 {
 }
 
 .social {
-    /* TODO: Add if further sns are a used
-    display: flex; 
+    /* TODO: Add flexbox if further sns are a used
     gap: 2em; */
     
     position: absolute;
-    top: 65vh;
+    top: 60vh;
     left: 60vw;
     
     color: var(--color-main);
