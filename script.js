@@ -13,7 +13,6 @@ const slides = [
     '/assets/ISP_BERLIN_290.jpg',
     '/assets/ISP_MUSEOS_122_Edit.jpg',
     '/assets/ISP_BERLIN_487.jpg',
-    '/assets/ISP_STREET_HAPPENS_783.jpg',
     '/assets/ISP_BERLIN_929.jpg',
     '/assets/ISP_BERLIN_331.jpg',
     '/assets/ISP_kaunas_446.jpg',
@@ -39,6 +38,13 @@ slides.forEach((src, index) =>{
 
     if (index === 0) img.classList.add('active');
     slidesContainer.appendChild(img);
+
+    img.onload = function (){
+        if (img.naturalHeight > img.naturalWidth) {
+            img.classList.add('vertical')
+        }
+    }
+
 });
 
 const displaySlide = (index) => {
