@@ -75,6 +75,7 @@ h4 {
     margin-top: 1em;
     
     border-radius: var(--image-border-small);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.69), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
 } 
 
 
