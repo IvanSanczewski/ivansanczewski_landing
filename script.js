@@ -28,7 +28,7 @@ const slides = [
 let currentSlide = 0;
 let autoSlideInterval;
 
-const slidesContainer = document.querySelector('.image');
+const slidesContainer = document.querySelector('.image-container');
 
 slides.forEach((src, index) =>{
     const img = document.createElement('img');
@@ -41,7 +41,7 @@ slides.forEach((src, index) =>{
 
     img.onload = function (){
         if (img.naturalHeight > img.naturalWidth) {
-            img.classList.add('vertical')
+            img.classList.add('vertical');
         }
     }
 
