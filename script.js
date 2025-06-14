@@ -1,4 +1,5 @@
 const visionsLink = document.querySelector('.visions-link')
+const interval = 50000
 
 document.querySelector('.visions-toggler').addEventListener('click', () => {
     visionsLink.classList.toggle('hidden');
@@ -59,12 +60,32 @@ const prevSlide = () => displaySlide(currentSlide - 1);
 
 // Automatic slides
 const startInterval = () => {
-    autoSlideInterval = setInterval(nextSlide, 2500);
+    autoSlideInterval = setInterval(nextSlide, interval);
 };
 
 const resetInterval = () => {
     clearInterval(autoSlideInterval);
     startInterval();
 };
+
+// Slide control with arrows keys
+document.addEventListener('keydown', (e) =>{
+    if(e.key === 'ArrowLeft') prevSlide();
+    if(e.key === 'ArrowRight') nextSlide();
+    resetInterval();
+});
+
+// Cursor keys slides controls
+document.querySelector('.left').addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+})
+
+document.querySelector('.right').addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+})
+
+
 
 startInterval();

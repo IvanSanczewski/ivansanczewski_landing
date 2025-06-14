@@ -53,7 +53,7 @@ h4 {
 
 /***** V I S I O N S *****/
 .visions {
-    width: 25Vw;
+    width: 25vw;
 
     position: absolute;
     top: 10vh;
@@ -63,12 +63,20 @@ h4 {
 }
 
 .visions-toggler {
+    font-weight: 400;
     letter-spacing: .025em;
+    
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    
     cursor: pointer;
 }
 
 .visions-toggler:hover {
-    letter-spacing: 0em;
+    
+    letter-spacing: .025em;
+    opacity: 1;
+
 }
 
 .visions-link {
@@ -77,7 +85,6 @@ h4 {
     border-radius: var(--image-border-small);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.69), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
 } 
-
 
 .image {
     width: 100%;
@@ -168,7 +175,7 @@ a {
     text-decoration: none;
 }
 
-a:hover, .visions-toggler:hover {
+a:hover {
     font-weight: 400;
 }
 
@@ -189,4 +196,35 @@ a:hover, .visions-toggler:hover {
 }
 
 
+/* A R R O W   I C O N S   C O N T R O L S */
+.arrow-controls {
+    display: flex;
+    justify-content: space-between;
 
+    width: 100%;
+
+    position: absolute;
+    top: 50vh;
+}
+
+.arrow-controls i {
+    transform: scalex(0.85);
+    transform: scaleY(1.2);
+    
+    cursor: pointer;
+    
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.left {
+    margin-left: -1em;
+}
+
+.right {
+    margin-right: -1em;
+}
+
+.left:hover, .right:hover{
+    opacity: 1
+}
